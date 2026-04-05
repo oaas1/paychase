@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #f3f4f6;
+}
+/* this is the navbar*/
+
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid black;
+  padding: 10px 80px;
+  background-color: rgba(7, 7, 63, 0.788);
+  color: white;
+}
+.search-btn{
+  padding: 5px 30px;
+}
+.logo{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+.bill-text{
+  color: rgb(1, 255, 22);
+}
+
+/* this is the dashboard */
+
+.dashboard{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.total-invocies{
+  background: rgb(70, 70, 168);
+  color: white;
+  display: inline-block;
+  padding: 15px 150px 10px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.box-title{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 35px;
+}
+.dashboard-numbers{
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 5px;
+}
+.pending-payments{
+  background: rgb(230, 142, 10);
+  color: white;
+  display: inline-block;
+  padding: 15px 150px 10px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.total-paid{
+  background-color: rgb(30, 163, 13);
+  color: white;
+  display: inline-block;
+  padding: 15px 150px 10px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.overdue-invoice{
+  background: rgb(221, 8, 8);
+  color: white;
+  display: inline-block;
+  padding: 15px 150px 10px 10px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/*all buttons under dashboard*/
+
+.all-buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.new-invoice-btn{
+  background-color: rgb(30, 163, 13);
+  color: white;
+  padding: 13px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.whatsapp-reminder-btn{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 13px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 40px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.track-payments-btn{
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 13px 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* this is the table */
+.table-title{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin-top: 40px;
+  margin-left: 390px;
+}
+.invoice-table{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+table{
+  width: 60%;
+  border: collapse;
+  background-color: white;
+}
+th, td{
+  padding: 16px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+td{
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+table,tr:last-child td{
+  border-bottom: none;
+}
+table, tr:first-child th{
+  font-weight: bold;
+}
