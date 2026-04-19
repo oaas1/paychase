@@ -3,21 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/create-invoice.css">
+    <link rel="stylesheet" href="/main-project/create-invoice.css">
     <title>Document</title>
 </head>
 <body>
     <div class="form-body">
+        
+
         <div class="invoice-form">
+            <h1>Create New Invoice</h1>
+            
             <form action="">
-            <input type="text" placeholder="Client Name">
-            <input type="number" placeholder="e.g +23409048323255">
-            <input type="text" placeholder="Client Name">
-            <input type="number" placeholder="Client Name">
-            <input type="date" placeholder="Client Name">
+                <div class="form-group">
+                    <label for="client-name">Client Name</label>
+                  <input type="text" id="clientName" placeholder="Client Name">  
+                </div>
+
+                <div class="form-group">
+                    <label for="client-phone">Client Phone</label>
+                  <input type="number" id="clientPhone" placeholder="09048323255">  
+                </div>
+
+                <div class="form-group">
+
+                    <label for="client-email">Client Email</label>
+                    <input type="email" id="clientEmail" placeholder="Client Email">
+                </div>
+                <div class="form-group">
+
+                    <label for="client-address">Amount (&#8358;)</label>
+                    <input type="number" id="Amount" placeholder="e.g 1000 or 1000.00">
+                </div>
+
+                <div class="form-group">
+                    <label for="invoice-date">Due Date</label>
+                    <input type="date" id="invoiceDate">
+                </div>
+                
+                <div>
+                    <button type="submit">Create Invoice</button>
+                    <a href="main-page.html">Cancel</a>
+                </div>
 
             </form>
-            <button class="create-btn">Create Invoice</button>
+            
         </div>
     </div>
     
