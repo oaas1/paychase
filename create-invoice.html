@@ -13,35 +13,35 @@
         <div class="invoice-form">
             <h1>Create New Invoice</h1>
             
-            <form action="">
+            <form onsubmit="createInvoice(event)">
                 <div class="form-group">
-                    <label for="client-name">Client Name</label>
+                    <label for="clientName">Client Name</label>
                   <input type="text" id="clientName" placeholder="Client Name">  
                 </div>
 
                 <div class="form-group">
-                    <label for="client-phone">Client Phone</label>
+                    <label for="clientPhone">Client Phone</label>
                   <input type="number" id="clientPhone" placeholder="09048323255">  
                 </div>
 
                 <div class="form-group">
 
-                    <label for="client-email">Client Email</label>
+                    <label for="clientEmail">Client Email</label>
                     <input type="email" id="clientEmail" placeholder="Client Email">
                 </div>
                 <div class="form-group">
 
-                    <label for="client-address">Amount (&#8358;)</label>
-                    <input type="number" id="Amount" placeholder="e.g 1000 or 1000.00">
+                    <label for="amount">Amount (&#8358;)</label>
+                    <input type="number" id="amount" placeholder="e.g 1000 or 1000.00">
                 </div>
 
                 <div class="form-group">
-                    <label for="invoice-date">Due Date</label>
-                    <input type="date" id="invoiceDate">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" id="dueDate">
                 </div>
                 
                 <div>
-                    <button type="submit">Create Invoice</button>
+                    <button type="submit" onclick="createInvoice()">Create Invoice</button>
                     <a href="main-page.html">Cancel</a>
                 </div>
 
@@ -52,4 +52,6 @@
     
     
 </body>
+
+<script src="/main-project/create-invoice.js"></script>
 </html>
