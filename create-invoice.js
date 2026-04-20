@@ -1,7 +1,9 @@
-function createInvoice(event){
-    event.preventDefault(event);
+function createInvoice(){
     let invoiceData = retrieveInvoiceData(); // Function to get data from form inputs
     let readInvoiveData = readingDataFromLocalStorage(invoiceData); // Function to read existing data from local storage
+    console.log(readInvoiveData);
+
+    alert('Invoice created successfully!');
 }
 
 function retrieveInvoiceData(){
@@ -23,6 +25,8 @@ function retrieveInvoiceData(){
     return invoiceData;
 }
 
+//Read data from local storage
+
 function readingDataFromLocalStorage(invoiceData){
     // Storing data in local storage
 
@@ -31,4 +35,21 @@ function readingDataFromLocalStorage(invoiceData){
     let ce = localStorage.setItem('clientEmail', invoiceData.clientEmail);
     let am = localStorage.setItem('amount', invoiceData.amount);
     let dd = localStorage.setItem('dueDate', invoiceData.dueDate);
+
+    // getting values from local to table
+    let getClientName = localStorage.getItem('clientName');
+    let getClientPhone = localStorage.getItem('clientPhone');
+    let getClientEmail = localStorage.getItem('clientEmail');
+    let getAmount = localStorage.getItem('amount');
+    let getDueDate = localStorage.getItem('dueDate');
+
+    let getInvoiceData = {
+        getClientName,
+        getClientPhone,
+        getClientEmail,
+        getAmount,
+        getDueDate
+    };
+        
+    return getInvoiceData;
 }
