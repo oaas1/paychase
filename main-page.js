@@ -19,18 +19,26 @@ function loadInvoices() {
 
   // 4. Build a new row as an HTML string
   const newRow = `
-    <tr>
-      <td>${clientName}</td>
+    <tr>              
+      <td>
+      <div class="client-cell">
+        <div class="client-avatar">OS</div>
+        <div>
+          <div class="client-name">${clientName}</div>
+          <div class="client-email">${clientEmail}</div>  
+        </div>
+      <div> 
+      </td>
       <td>₦ ${parseInt(amount).toLocaleString()}</td>
       <td>${dueDate}</td>
       <td><span class="badge overdue">Pending</span></td>
 
-                <td>
-                  <div class="action-cell">
-                    <button class="action-btn">Reminder</button>
-                    <button class="btn-icon">...</button>
-                  </div>
-                </td>
+        <td>
+          <div class="action-cell">
+            <button class="action-btn">Reminder</button>
+            <button class="btn-icon">...</button>
+          </div>
+        </td>
     </tr>
   `;
 
