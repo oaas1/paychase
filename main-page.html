@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/main-project/main-page.css">
-  <title>Document</title>
+  <title>Paychase</title>
 </head>
 <body>
   <div class="main-page">
@@ -13,78 +14,138 @@
         <div>
           <h1 class="logo">Pay<span class="bill-text">chase</span></h1>
         </div>
-        <div class="serach">
-          <input class="search-btn" type="text" placeholder="Search...">
+        <div class="search">
+          <span class="search-icon">⌕</span>
+          <input class="search-btn" type="text" placeholder="Search Invoices...">
         </div>
-        <div>
-          <h1>profile</h1>
+        <div class="nav-right">
+          <div class="avatar">OS</div>
         </div>
       </nav>
     </div>
 
     <div class="main-body">
-      <div class="dashboard">
-        <div class="total-invocies">
-          <p class="box-title">Total Invoices</p>
-          <p class="dashboard-numbers">12</p>
-        </div>
-        <div class="pending-payments">
-          <p class="box-title" >Pending Payments</p>
-          <p class="dashboard-numbers">&#8358;85,000</p>
-        </div>
-        <div class="total-paid">
-          <p class="box-title">Paid This Month</p>
-          <p class="dashboard-numbers">&#8358;155,000</p>
-        </div>
-        <div class="overdue-invoice">
-          <p class="box-title" >Overdue Invoice</p>
-          <p class="dashboard-numbers">3</p>
-        </div>
-      </div>
-    </div>
+      <aside>
+        <div class="nav-section">Main</div>
+        <div class="nav-item active"><span class="icon">▦</span> Dashboard</div>
+        <div class="nav-item"><span class="icon">◈</span> Invoices</div>
+        <div class="nav-item"><span class="icon">◎</span> Clients</div>
+      
+        <div class="nav-section">Tools</div>
+        <div class="nav-item"><span class="icon">◷</span> Reminders</div>
+        <div class="nav-item"><span class="icon">◉</span> Payments</div>
+        <div class="nav-item"><span class="icon">◫</span> Templates</div>
+      
+        <div class="nav-section">Account</div>
+        <div class="nav-item"><span class="icon">◌</span> Settings</div>
+      </aside>
 
-    <div class="all-buttons">
-      <div>
-        <button class="new-invoice-btn">&plus; Create New Invoice</button>
-      </div>
-      <div>
-        <button class="whatsapp-reminder-btn">Send Whatsapp Reminder</button>
-      </div>
-      <div>
-        <button class="track-payments-btn">Track Payments</button>
-      </div>
-      <div>
-        <button class="reminder-templates-btn">Reminder Templates</button>
-      </div>
-    </div>
 
-    <!--invoice Table-->
+      <main>
+        <div class="page-header">
+          <div>
+            <h1>Dashboard</h1>
+            <p>Wednesday, 22 April 2026</p>
+          </div>
+        </div>
+
+          <div class="stats">
+            <div class="stats-card total">
+              <div class="stats-label">Total Invoices</div>
+              <div class="stats-value">12</div>
+              <div class="stats-sub">All time</div>
+            </div>
+            <div class="stats-card pending">
+              <div class="stats-label">Pending Payments</div>
+              <div class="stats-value">&#8358;85,000</div>
+              <div class="stats-sub">5 invoices waiting</div>
+            </div>
+            <div class="stats-card paid">
+              <div class="stats-label">Paid This Month</div>
+              <div class="stats-value">&#8358;155,000</div>
+              <div class="stats-sub">7 invoice settled</div>
+            </div>
+            <div class="stats-card overdue">
+              <div class="stats-label" >Overdue Invoice</div>
+              <div class="stats-value">3</div>
+              <div class="stats-sub">Reminders sent</div>
+            </div>
+          </div>
     
-    <h1 class="table-title">Recent Invoices</h1>
-    <div class="invoice-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Client Name</th>
-            <th>Amount</th>
-            <th>Due Date</th>
-            <th>Status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <!-- Table body will be populated by JavaScript -->
-        <tbody>
-          <tr>
-            <td>David Johnson</td>
-            <td>&#8358; 70,000</td>
-            <td>2024-07-15</td>
-            <td><span class="status-pending">Pending</span></td>
-            <td><button class="action-btn">Sending Reminder</button> </td>
-          </tr>
-        </tbody>
+
+        <div class="actions-bar">
+          <div>
+            <button  class="new-invoice-btn"><a href="/main-project/create-invoice.html">+ Create invoice</a></button>
+          </div>
+          <div>
+            <button class="whatsapp-reminder-btn">💬 Send WhatsApp reminder</button>
+          </div>
+          <div>
+            <button class="track-payments-btn">◎ Track payments</button>
+          </div>
+          
+        </div> 
+    
+
+        <!--invoice Table-->
         
-      </table>
+        <div class="invoice-table">
+
+          <div class="table-header">
+            <div style="display:flex;align-items:center">
+              <span class="table-title">Recent invoices</span>
+              <span class="table-count">7</span>
+            </div>
+          </div>
+
+
+          <table>
+            <thead>
+              <tr>
+                <th>Client Name</th>
+                <th>Amount</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <!-- Table body will be populated by JavaScript -->
+            <tbody>
+              <tr>
+                <td>
+                  <div class="client-cell">
+                    <div class="client-avatar">DJ</div>
+
+                    <div>
+                      <div class="client-name">David Johnson</div>
+                      <div class="client-email">david.johnson@example.com</div>  
+                    </div>
+                    
+                  </div>
+                </td>
+
+                <td><span class="amount">&#8358; 70,000</span></td>
+                <td><span class="due-date over">2024-07-15</span></td>
+                <td><span class="badge overdue">Pending</span></td>
+
+                <td>
+                  <div class="action-cell">
+                    <button class="action-btn">Reminder</button>
+                    <button class="btn-icon">...</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            
+          </table>
+        </div>
+      </main>
+
+
     </div>
+
+        
+      
 
 
 

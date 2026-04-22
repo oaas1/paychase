@@ -23,8 +23,14 @@ function loadInvoices() {
       <td>${clientName}</td>
       <td>₦ ${parseInt(amount).toLocaleString()}</td>
       <td>${dueDate}</td>
-      <td><span class="status-pending">Pending</span></td>
-      <td><button class="action-btn">Sending Reminder</button></td>
+      <td><span class="badge overdue">Pending</span></td>
+
+                <td>
+                  <div class="action-cell">
+                    <button class="action-btn">Reminder</button>
+                    <button class="btn-icon">...</button>
+                  </div>
+                </td>
     </tr>
   `;
 
