@@ -52,22 +52,22 @@
           <div class="stats">
             <div class="stats-card total">
               <div class="stats-label">Total Invoices</div>
-              <div class="stats-value">12</div>
+              <div class="stats-value" id="totalCount">0</div>
               <div class="stats-sub">All time</div>
             </div>
             <div class="stats-card pending">
               <div class="stats-label">Pending Payments</div>
-              <div class="stats-value">&#8358;85,000</div>
+              <div class="stats-value" id="pendingAmount">₦0</div>
               <div class="stats-sub">5 invoices waiting</div>
             </div>
             <div class="stats-card paid">
               <div class="stats-label">Paid This Month</div>
-              <div class="stats-value">&#8358;155,000</div>
+              <div class="stats-value" id="paidAmount">₦0</div>
               <div class="stats-sub">7 invoice settled</div>
             </div>
             <div class="stats-card overdue">
               <div class="stats-label" >Overdue Invoice</div>
-              <div class="stats-value">3</div>
+              <div class="stats-value" id="overdueCount">0</div>
               <div class="stats-sub">Reminders sent</div>
             </div>
           </div>
@@ -75,7 +75,7 @@
 
         <div class="actions-bar">
           <div>
-            <button  class="new-invoice-btn"><a href="/main-project/create-invoice.html">+ Create invoice</a></button>
+            <button  class="new-invoice-btn" id="createInvoiceBtn">+ Create invoice</a></button>
           </div>
           <div>
             <button class="whatsapp-reminder-btn">💬 Send WhatsApp reminder</button>
@@ -110,7 +110,7 @@
               </tr>
             </thead>
             <!-- Table body will be populated by JavaScript -->
-            <tbody>
+            <tbody id="invoiceTableBody">
               <tr>
                 <td>
                   <div class="client-cell">
@@ -145,8 +145,61 @@
     </div>
 
         
-      
+      <!--modal-->
 
+    <form id="invoiceForm">
+        <div class="modal-overlay" id="modalOverlay">
+          <div class="modal">
+            <div class="modal-header">
+              <span class="modal-title">Create new invoice</span>
+              <div class="modal-close" id="closeBtn">✕</div>
+            </div>
+        
+            <div class="success-bar" id="successBar">
+              Invoice created successfully
+            </div>
+            
+            <div class="error" id="errorBar">
+              Please fill in all fields
+            </div>
+
+            <div class="field">
+              <label>Client name</label>
+              <input type="text" id="clientName" placeholder="e.g. Amina Bello">
+              <div class="error" id="err-name">Please enter a client name</div>
+            </div>
+        
+            <div class="field">
+              <label>Client phone (WhatsApp)</label>
+              <input type="tel" id="clientPhone" placeholder="e.g. +2348012345678">
+              <div class="error" id="err-phone">Please enter a phone number</div>
+            </div>
+        
+            <div class="field">
+              <label>Client email</label>
+              <input type="email" id="clientEmail" placeholder="e.g. amina@studio.com">
+            </div>
+        
+            <div class="field-row">
+              <div class="field">
+                <label>Amount (₦)</label>
+                <input type="number" id="amount" placeholder="e.g. 50000">
+                <div class="error" id="err-amount">Enter a valid amount</div>
+              </div>
+              <div class="field">
+                <label>Due date</label>
+                <input type="date" id="dueDate">
+                <div class="error" id="err-date">Pick a due date</div>
+              </div>
+            </div>
+        
+            <div class="modal-footer">
+              <button type="submit" class="btn-cancel" id="cancelBtn">Cancel</button>
+              <button class="btn-submit" id="submitBtn">Create invoice</button>
+            </div>
+          </div>
+        </div>
+    </form>
 
 
 
